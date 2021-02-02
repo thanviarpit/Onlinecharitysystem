@@ -1,0 +1,47 @@
+<div class="form-group">
+<label for="category">Select NGO Category</label><br>
+<select class="form-control" (change)="atGetCat($event.target.value)"> 
+    <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
+</select>
+</div>
+<div class="form-group">
+    <label for="ngoname">NGO Name:</label>
+    <input type="text" class="form-control" id="name" autofocus="true" required placeholder="Enter NGO Name" [(ngModel)]="orgRegName">
+</div>
+<div class="form-group">
+    <label for="age">Registration Number:</label>
+    <input type="text" class="form-control" id="age" required placeholder="Enter Registration Number" [(ngModel)]="orgRegNum">
+</div>
+<div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" required placeholder="Enter Email" [(ngModel)]="email">
+</div>
+<div class="form-group">
+    <label for="contact">Contact Num:</label>
+    <input type="text" class="form-control" id="contact" required placeholder="Enter Contact Number" [(ngModel)]="mobile">
+</div>
+<div class="form-group">
+    <label for="address">Address:</label>
+    <textarea class="form-control" rows="3" id="address" required placeholder="Enter Address" [(ngModel)]="address"></textarea>
+</div>
+<div class="form-group">
+    <label for="username">Username:</label>
+    <input type="text" class="form-control" id="username" required placeholder="Enter Username" [(ngModel)]="username">
+</div>
+<div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="pwd" name="pwd" class="form-control" (click)="onPassClick()"
+  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+  title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required placeholder="Enter Password" [(ngModel)]="password">
+</div>
+<div class="form-group">
+    <label for="email">Confirm Password:</label>
+    <input type="password" id="cnfpwd" name="cnfpwd" class="form-control" [(ngModel)]="cnfPassword" (keyup.enter)="onChangePassword()"
+    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+    title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" required placeholder="Confirm Password">
+</div>
+<div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-success" [disabled]="modalFlag==true?true:false" (click)="register()">Register</button>
+    <div>
+</div>

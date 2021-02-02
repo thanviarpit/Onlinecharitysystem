@@ -1,0 +1,24 @@
+fieldset {
+    background-color: #eeeeee;
+    width: 420px;
+    margin-left: 180px;
+    margin-top: 80px;
+  }
+  
+  legend {
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+  }
+  
+  input {
+    margin: 10px;
+  }
+
+  select {
+    margin: 10px;
+  }
+  
+  button {
+    margin: 10px;
+  }

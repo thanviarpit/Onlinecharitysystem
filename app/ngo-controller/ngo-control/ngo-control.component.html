@@ -1,0 +1,103 @@
+<div class="jumbotron">
+    <h2>Welcome NGO : {{this.ngoName | titlecase}}</h2>
+    <ul class="nav navbar-nav">
+      <li><button type="button" class="btn btn-info" (click)="updProfile()">Update Profile</button></li>
+      <li><button type="button"class="btn btn-danger" (click)="logoutButt()">LogOut</button></li>
+    </ul>
+</div>
+
+<div *ngIf="updFormFlag">
+  <app-update-ngo [nob]="ngo" (flagEvent)="updFormFlag=$event"></app-update-ngo>
+</div>
+
+<div *ngIf="donorFlag"> 
+  <h1>List of Donors</h1>
+  <table class="table table-hover table-dark">
+    
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Address</th>
+        <th>Occupation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let donation of donationArr">
+        <td>{{donation.donor.name}}</td>
+        <td>{{donation.donor.age}}</td>
+        <td><a href="mailto:abhishekssharma12@gmail.com">{{donation.donor.email}}</a></td>
+        <td>{{donation.donor.mobile}}</td>
+        <td>{{donation.donor.address}}</td>
+        <td>{{donation.donor.occupation}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>  
+<div class="jumbotron text-center"> 
+  <h1>Our Valuable Donors</h1>
+</div>
+<div class="container" style="background-color:grey;">
+  <div class="col-sm-4">
+    <div class="container">
+      <img src="assets/images/nitin-passi.png" alt="Notebook" style="width:30%;">
+      <div class="text-block">
+        <h1>Mr.Nitin Passi</h1>
+        <p><a href="mailto:abhishekssharma12@gmail.com">passinitin@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="container">
+      <img src="assets/images/neha-hirani.png" alt="Notebook" style="width:30%;">
+      <div class="text-block">
+        <h1>Miss Neha</h1>
+        <p><a href="mailto:abhishekssharma12@gmail.com">neh12@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="container">
+      <img src="assets/images/dinesh-gupta.png" alt="Notebook" style="width:30%;">
+      <div class="text-block">
+        <h1>Mr.Dinesh</h1>
+        <p><a href="mailto:abhishekssharma12@gmail.com">guptadinesh98@rediffmail.com</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="container">
+      <img src="assets/images/snehal-mantri.png" alt="Notebook" style="width:30%;">
+      <div class="text-block">
+        <h1>Mrs.Snehal</h1>
+        <p><a href="mailto:abhishekssharma12@gmail.com">snehalm157@outlook.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="container">
+      <img src="assets/images/sukumar-srinivas.png" alt="Notebook" style="width:30%;">
+      <div class="text-block">
+        <h1>Mr.Srinivas</h1>
+        <p><a href="mailto:abhishekssharma12@gmail.com">srinivaskumar@yahoo.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="container">
+      <img src="assets/images/mamta-wasan.png" alt="Notebook" style="width:30%;">
+      <div class="text-block">
+        <h1>Mrs.Mamta</h1>
+        <p><a href="mailto:abhishekssharma12@gmail.com">wasanmamta@orkut.com</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class=""></div>

@@ -1,0 +1,97 @@
+
+  <div class="container-fluid text-center">    
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
+        <p><a href="/categorylist">List of Charities</a></p>
+        <p><a href="/ngolist">List of NGOS</a></p>
+        <p><a href="/donorlist">List of Donors</a></p>
+      </div>
+      <div class="col-sm-10 text-left"> 
+        <h1>Donors</h1>
+        <table class="table table-striped">
+          
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Occupation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let donor of donors">
+              <td>{{donor.name}}</td>
+              <td>{{donor.age}}</td>
+              <td>{{donor.email}}</td>
+              <td>{{donor.address}}</td>
+              <td>{{donor.occupation}}</td>
+            </tr>
+           
+          </tbody>
+        </table>
+    </div>  
+    </div>
+    <marquee><h2>You can also donate to <B>NGOs</B> transparently by <a href="donor">
+      <u><span class="glyphicon glyphicon-user">Signing Up Here</span></u></a></h2></marquee>
+  </div>
+<hr>
+  <!-- MAIN (Center website) -->
+<div class="main">
+
+  <h1>Corporate & Institutional Supporters</h1>
+  <hr>
+  
+  <h2>PORTFOLIO</h2>
+
+  <!-- Portfolio Gallery Grid -->
+  <div class="row">
+    <div class="column">
+      <div class="content">
+        <img src="/assets/images/navneet-kapoor.png" alt="Mountains" style="width:100%">
+        <h3>Navneet Kapoor</h3>
+        <h5>-President & MD<br>
+          Target India</h5>
+        <p>“Our partnership with the Care For You is a great example of how corporate and social organizations can empower sections of society through literacy and well-being initiatives. Target has a legacy of giving and service to the communities where we operate. By partnering with Care For You in meaningful ways, we wish to continue building a strong foundation for those who may be lesser privileged. We are thankful to Care For You for giving Target team members opportunities to volunteer and give back to the community.”</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+      <img src="/assets/images/uzma-irfan.png" alt="Lights" style="width:100%">
+        <h3>Uzma Irfan</h3>
+        <h5>-Director - Corporate Communications Prestige Group</h5>
+        <p>“Ever since its inception, Care For You has come a long way in making a significant contribution to society by improving the lives of thousands of individuals. It makes a difference each day by playing a pivotal role in crucial areas impacting our society such as education, women empowerment, healthcare, social entrepreneurship and so on. The Prestige Group is happy to have been associated with Care For You’s efforts and will look forward to supporting their future initiatives.”</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+      <img src="/assets/images/aditya-malhotra.png" alt="Nature" style="width:100%">
+        <h3>Aditya Malhotra</h3>
+        <h5>-Managing Director<br>
+          Amtek Auto Ltd.</h5>
+        <p>“At Amtek Auto, we strongly believe in our commitment to the cause of children’s education. We have been associated with Care For You for the past three years and are happy to have nurtured over 400 children through various programmes undertaken with them. Children are the future of our society and we need to endow them with good education so that they become empowered citizens of this nation with equal rights and opportunities. The partnership with Care For You has helped strengthen our social responsibility initiative and implement useful community development programmes.”</p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+      <img src="/assets/images/avinash-venkat.png" alt="Mountains" style="width:100%">
+        <h3>Avinash Venkat</h3>
+        <h5>-Director HR<br>
+          South Asia & Sub-Saharan Africa Avery Dennison</h5>
+        <p>“We have worked with Care For You on community development projects since early 2011 and have been able to see a clear impact on the community through tangible deliverables. What also sets these projects apart is that in addition to the larger agenda of community development, each of these provides an opportunity for our employees to engage in community development initiatives, steering away from cheque-book philanthropy approach. This in turn, encourages us to identify additional opportunities to work with Care For You on projects that make a difference to the community.”</p>
+      </div>
+    </div>
+  <!-- END GRID -->
+  </div>
+  
+  <div class="content">
+    <img src="/assets/images/yeshwant-pawar.jpeg" alt="Bear" style="width:100%">
+    <h3>Yeshwant Pawar</h3>
+    <h5>-General Manager, Air France-KLM Alps<br>Balkans and Central Europe</h5>
+    <p>
+      We at Air France-KLM have been working in close co-operation with <B>Care For You Foundation</B> to help empower underprivileged children and youth through relevant education, innovative healthcare and market-focused livelihood programmes. Since 2010, we have supplemented substantial support system and together with Smile, we hope to bring changes in the lives of children, youth and women.”  
+    </p>
+  </div>
+  
+  <!-- END MAIN -->
+  </div>
