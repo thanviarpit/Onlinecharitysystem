@@ -1,0 +1,32 @@
+
+  <div class="container-fluid text-center">    
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
+        <p><a href="/categorylist">List of Charities</a></p>
+        <p><a href="/ngolist">List of NGOS</a></p>
+        <p><a href="/donorlist">List of Donors</a></p>
+      </div>
+      <div class="col-sm-10 text-left"> 
+        <h1>NGOs</h1>
+        <table class="table table-striped">
+          
+          <thead>
+            <tr>
+              <th>NGO Name</th>
+              <th>Email</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ngo of NGOS">
+              <td>{{ngo.orgRegName}}</td>
+              <td>{{ngo.email}}</td>
+              <td>{{ngo.address}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>  
+    </div>
+    <marquee><h2>You can also register your <B>NGOs</B> by <a href="ngo">
+      <u><span class="glyphicon glyphicon-user">Signing Up Here</span></u></a></h2></marquee>
+  </div>

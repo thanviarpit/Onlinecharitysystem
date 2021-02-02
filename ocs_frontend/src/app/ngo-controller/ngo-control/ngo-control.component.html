@@ -1,0 +1,40 @@
+<p>ngo-control works!</p>
+<div class="jumbotron">
+    <h2>Welcome NGO : {{this.ngoName}}</h2>
+    <ul class="nav navbar-nav">
+      <li><button type="button" class="btn btn-info" (click)="updProfile()">Update Profile</button></li>
+      <li><button type="button"class="btn btn-danger" (click)="logoutButt()">LogOut</button></li>
+    </ul>
+</div>
+
+<div *ngIf="updFormFlag">
+  <app-update-ngo [nob]="ngo" (flagEvent)="updFormFlag=$event"></app-update-ngo>
+</div>
+
+<div *ngIf="donorFlag"> 
+  <h1>List of Donors</h1>
+  <table class="table table-hover table-dark">
+    
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Address</th>
+        <th>Occupation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let donation of donationArr">
+        <td>{{donation.donor.name}}</td>
+        <td>{{donation.donor.age}}</td>
+        <td><a href="mailto:abhishekssharma12@gmail.com">{{donation.donor.email}}</a></td>
+        <td>{{donation.donor.mobile}}</td>
+        <td>{{donation.donor.address}}</td>
+        <td>{{donation.donor.occupation}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+</div>  

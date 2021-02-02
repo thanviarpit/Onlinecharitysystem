@@ -1,0 +1,62 @@
+<div class="jumbotron">
+    <h2>Welcome Donor : {{this.donorName }}</h2>
+    <ul class="nav navbar-nav">
+      <li><button type="button" class="btn btn-info" (click)="updProfile()">Update Profile</button></li>
+      <li><button type="button"class="btn btn-danger" (click)="logoutButt()">LogOut</button></li>
+    </ul>
+</div>
+<div *ngIf="updDonorFlag">
+    <app-update-donor [dob]="donor" (flagEvent)="updDonorFlag=$event"></app-update-donor>
+</div>
+<h1>List of NGO</h1>
+<div *ngIf="donatedNgoFlag"> 
+  <h3>Donated by you...</h3>
+  <table   class="table table-hover table-dark">
+    
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Payment Mode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let donation of donArr">
+        <td>{{donation.ngo.orgRegName}}</td>
+        <td>{{donation.donationAmount | currency:"INR":"symbol"}}</td>
+        <td>{{donation.donationDate | date}}</td>
+        <td>{{donation.paymentMode}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>  
+<hr class="form-group">
+<div> 
+  <h3>You can donate here....</h3>
+  <table class="table table-hover table-dark">
+    
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>NGO Category</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let apNgo of NGOS">
+        <td>{{apNgo.orgRegName}}</td>
+        <td>{{apNgo.email}}</td>
+        <td>{{apNgo.address}}</td>
+        <td>{{apNgo.category.name}}</td>
+        <td><button style='font-size:22px' class="btn btn-warning" (click)="donateForm(apNgo)" >Donate ! <i class='fas fa-hands-helping'></i></button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>  
+
+<div *ngIf="donationFormFlag">
+<app-donation-form [dob]="donor" [nob]="ngo" (flagEvent)="donationFormFlag=$event" (arrEvent)="donations=$event"></app-donation-form>
+</div>
